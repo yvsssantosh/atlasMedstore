@@ -33,14 +33,14 @@ for p in data:
     for c in con1:
         for m in con2:
             r.db('test').table('sampleProd').insert([
-                {"medicine":{
+                {
                     "activeIngredient": p['medicine']['activeIngredient'] ,
                     "costPerUnit":  p['medicine']['costPerUnit'] ,
                     "currency":  p['medicine']['currency'] ,
                     "manufacturer_id":  m['id'] ,
                     "name": p['medicine']['name'],
                     "chemicalComposition_id" : c['id']
-                }}
+                }
             ]).run()
             break
         break
